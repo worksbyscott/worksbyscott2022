@@ -6,11 +6,8 @@ import Flex from "../flex";
 import TitleBlock from "./JobTitle";
 import ProjectCard from "./projects/ProjectCard";
 import Text, { Strong } from '../text'
-import Marquee from 'react-fast-marquee'
 import Card from "../card";
 import { Button } from "../button";
-import { AspectRatio } from "../aspectratio";
-import Image from "next/image";
 import InlineCode from "../inlinecode";
 
 const ProjectsContainer = styled(Container, {
@@ -53,7 +50,7 @@ const HomeBlock = () => {
 
             <Container css={{ marginBottom: "$6 " }}>
                 <Card title="About Me">
-                    <Text>I’m <Strong>Scott Templeton</Strong>, and I've been a Front-end Engineer at the Scottish digital agency Ping Creates since June of 2021. I joined the team at Ping after graduating from Edinburgh Napier University with a Honours in Web Design and Development w/ User Experience Design.<br /><br /> I have a keen interest in the development of web-based user experiences which harmonise beautiful, elegant design with intractability. Currently, my main focus is the production of scalable, high quality design system solutions for a diverse client base at Ping.</Text>
+                    <Text>I’m Scott Templeton, and I've been a Front-end Engineer at the Scottish digital agency Ping Creates since June of 2021. I joined the team at Ping after graduating from Edinburgh Napier University with a Honours in Web Design and Development w/ User Experience Design.<br /><br /> I have a keen interest in the development of web-based user experiences which harmonise beautiful, elegant design with intractability. Currently, my main focus is the production of scalable, high quality design system solutions for a diverse client base at Ping.</Text>
                 </Card>
             </Container>
 

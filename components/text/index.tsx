@@ -1,6 +1,7 @@
+import { VariantProps } from '@stitches/react';
 import { motion } from 'framer-motion';
 import React from 'react';
-import { styled, VariantProps } from '../../theme.stitches'
+import { styled } from '../../theme.stitches'
 
 
 const Text = styled(motion.span, {
@@ -84,10 +85,7 @@ const Text = styled(motion.span, {
     },
 });
 
-type TextSizeVariants = Pick<
-    VariantProps<typeof Text>,
-    'contrast' | 'bold' | 'style' | 'font' | 'size'
->;
+type TextSizeVariants = Pick<VariantProps<typeof Text>, 'contrast' | 'bold' | 'style' | 'font' | 'size'>;
 
 type StrongProps = React.HTMLAttributes<HTMLParagraphElement> &
     TextSizeVariants;

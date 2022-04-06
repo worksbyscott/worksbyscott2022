@@ -1,12 +1,7 @@
 import type { NextPage } from 'next'
 import Container from '../../components/container'
-import { styled } from '../../theme.stitches'
 
-import { motion } from "framer-motion";
-import Link from "next/link";
-import Image from 'next/image'
 import Text, { Strong } from '../../components/text'
-import ProjectCard from '../../components/home/projects/ProjectCard';
 import { Button } from '../../components/button';
 import Card from '../../components/card';
 import Flex from '../../components/flex';

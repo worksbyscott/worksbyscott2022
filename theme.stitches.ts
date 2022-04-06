@@ -29,7 +29,6 @@ export const globalStyles = globalCss({
 
 export {
     keyframes,
-    VariantProps
 }
 
 export const { styled, css } = createStitches({
