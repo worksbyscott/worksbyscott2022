@@ -106,7 +106,7 @@ const ToolBarButton = ({ url, tooltip, children }: ToolBarProps) => {
                     </>
                 ) : (
                     <>
-                        <Link href={url}>
+                        <Link passHref href={url}>
                             <ToolContainer
                                 whileHover={{
                                     scale: 1.05

@@ -83,7 +83,7 @@ const ProjectCard = ({ img, name, url, description, index }: IProjectCard) => {
                 delay: index ? index * 0.2 : 0
             }}
         >
-            <Link href={url}>
+            <Link passHref href={url}>
                 <Flex column>
                     <CardContainer
                         exit={{

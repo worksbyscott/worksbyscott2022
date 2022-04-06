@@ -104,6 +104,10 @@ const Strong = React.forwardRef<React.ElementRef<'strong'>, StrongProps>(
     }
 );
 
+Strong.displayName = "Strong"
+
+Text.displayName = 'Text';
+
 export {
     Strong
 }
