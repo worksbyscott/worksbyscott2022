@@ -8,6 +8,7 @@ import MapIcon from '../../../assets/Map.svg';
 import MailIcon from '../../../assets/Mail.svg';
 import { Button } from '../../button/'
 import { motion } from "framer-motion";
+import ContactFormDialog from "../../contact-form/Index";
 
 const HeadingContainer = styled(Flex, {
     width: "100%",
@@ -15,7 +16,11 @@ const HeadingContainer = styled(Flex, {
 })
 
 const Heading = styled(Text, {
-    marginBottom: '$1'
+    marginBottom: '$1',
+
+    "@bp1": {
+        fontSize: "3rem"
+    },
 })
 
 const Icon = styled(MapIcon, {
@@ -79,6 +84,9 @@ const TitleBlock = () => {
                         overflow: "hidden",
                         lineHeight: "$4",
                         color: "$typePrimary",
+                        "@bp1": {
+                            fontSize: '3.2rem'
+                        },
                     }}>{convertLine("UI Designer and ")}<br></br>{convertLine("Front-end Developer")}</Heading>
                 <Flex
                     initial={{
@@ -99,22 +107,25 @@ const TitleBlock = () => {
                     <Icon />
                     <Text css={{ color: "$typeColour", margin: 0 }} as='p' size='1'>Currently working at PingCreates</Text>
                 </Flex>
-                <Button
-                    initial={{
-                        opacity: 0,
+                <ContactFormDialog>
 
-                    }}
-                    animate={{
-                        opacity: 1,
+                    <Button
+                        initial={{
+                            opacity: 0,
 
-                    }}
+                        }}
+                        animate={{
+                            opacity: 1,
+
+                        }}
 
 
-                    transition={{
-                        duration: 1,
-                        delay: 0.3
-                    }}
-                    shadow css={{ marginTop: "$4" }} type='featured'><Mail />Contact me</Button>
+                        transition={{
+                            duration: 1,
+                            delay: 0.3
+                        }}
+                        shadow css={{ marginTop: "$4" }} type='featured'><Mail />Contact me</Button>
+                </ContactFormDialog>
             </HeadingContainer>
         </>
     )

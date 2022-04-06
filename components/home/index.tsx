@@ -17,6 +17,11 @@ const ProjectsContainer = styled(Container, {
     display: "grid",
     gridTemplateColumns: "1fr 1fr",
     gap: "$3",
+
+    "@bp1": {
+        display: 'flex',
+        flexDirection: "column"
+    },
 })
 
 const ProjectsInnerContainer = styled(motion.div, {
@@ -25,7 +30,11 @@ const ProjectsInnerContainer = styled(motion.div, {
     flexWrap: "wrap",
 
     gap: "$4",
-    overflow: "hidden"
+    overflow: "hidden",
+
+    "@bp1": {
+        flexDirection: "column",
+    },
 })
 
 const HomeBlock = () => {

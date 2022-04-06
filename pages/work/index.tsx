@@ -11,6 +11,11 @@ const ProjectsContainer = styled(motion.div, {
     display: "grid",
     gridTemplateColumns: "1fr 1fr",
     gap: "$3",
+
+    "@bp1": {
+        display: 'flex',
+        flexDirection: "column"
+    },
 })
 
 const Work: NextPage = () => {

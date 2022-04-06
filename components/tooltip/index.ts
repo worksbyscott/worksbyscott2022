@@ -26,7 +26,9 @@ export const StyledContent = styled(TooltipPrimitive.Content, {
     padding: '10px 15px',
     fontSize: 15,
     lineHeight: 1,
-    color: "$tooltip",
+    zIndex: 1020,
+    fontFamily: "$copy",
+    color: "$slate10",
     backgroundColor: '#1B1B1B',
     filter: "drop-shadow(0px 3px 14px rgba(0, 0, 0, 0.3));",
     '@media (prefers-reduced-motion: no-preference)': {

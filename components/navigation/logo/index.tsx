@@ -17,8 +17,13 @@ const IconContainer = styled(motion.div, {
     transition: "all .2s ease-in",
     display: "flex",
     alignContent: "center",
+    position: 'relative',
 
     ['svg']: {
+        position: 'absolute',
+        top: '50%',
+        left: '50%',
+        transform: "translate(-50%, -50%)",
         width: '24px',
         height: '24px',
     },

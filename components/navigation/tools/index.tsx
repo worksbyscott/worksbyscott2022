@@ -7,12 +7,13 @@ import ToolBarButton from "./ToolIcon"
 import HomeIcon from '../../../assets/Home.svg'
 import NFTIcon from '../../../assets/Mail.svg'
 import MailIcon from '../../../assets/NFT.svg'
+import ContactFormDialog from '../../contact-form/Index'
 
 const Grid = styled(motion.div, {
     display: "grid",
     alignItems: "center",
     gap: "$2",
-    gridTemplateColumns: "1fr 1fr 1fr 1fr",
+    gridTemplateColumns: "1fr 1fr 1fr",
     gridAutoFlow: "row"
     //grid-auto-flow: row;
 })
@@ -38,11 +39,11 @@ const PreToolBar: React.FC = () => {
                     <ToolBarButton url='/work' tooltip="About" >
                         <MailIcon />
                     </ToolBarButton>
-                    <ToolBarButton url='/nft' tooltip="Work" >
-                        <HomeIcon />
-                    </ToolBarButton>
-                    <ToolBarButton url='/contact' tooltip="Contact" >
-                        <NFTIcon />
+
+                    <ToolBarButton url='none' tooltip="Contact" >
+                        <ContactFormDialog>
+                            <NFTIcon />
+                        </ContactFormDialog>
                     </ToolBarButton>
                 </LayoutGroup>
             </Grid>

@@ -10,6 +10,12 @@ const Container = styled("div", {
         margin: "0 2%",
     },
 
+
+    '@bp1': {
+        width: "92%",
+        margin: "0 4%",
+    },
+
     variants: {
         wide: {
             true: {

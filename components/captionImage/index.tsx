@@ -63,7 +63,17 @@ const CaptionImage = (props: ImageProps) => {
             </AspectRatio.Root>
             {caption && (
                 <ImageCaption>
-                    <Text css={{ fontSize: "$1", textAlign: "center", margin: 0 }}>{caption}</Text>
+                    <Text css={{
+                        fontSize: "$1",
+                        textAlign: "center",
+                        margin: 0,
+
+                        "@bp1": {
+                            fontSize: ".8rem"
+                        },
+
+
+                    }}>{caption}</Text>
                 </ImageCaption>
             )}
         </ImageContainer>

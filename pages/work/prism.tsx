@@ -19,12 +19,35 @@ const Prism: NextPage = () => {
     return (
         <>
             <Container>
-                <Flex spaceBetween alignCenter>
+                <Flex spaceBetween
+                    css={{
+                        alignContent: 'center',
+                        "@bp1": {
+                            flexDirection: "column",
+                            alignContent: 'normal',
+                            marginBottom: "4rem"
+                        },
+                    }}
+                >
                     <Flex column>
-                        <Text contrast font="title" bold size="5">Prism Animation</Text>
-                        <Text>Javascript Animation Library</Text>
+                        <Text contrast font="title" bold size="5"
+                            css={{
+                                "@bp1": {
+                                    margin: 0
+                                },
+                            }}
+                        >Prism Animation</Text>
+                        <Text >Javascript Animation Library</Text>
                     </Flex>
-                    <Button shadow as={"a"} href="https://www.npmjs.com/package/prism-animation">Download on NPM</Button>
+                    <Button
+                        css={{
+                            "@bp1": {
+                                margin: '2rem 0 0 0'
+                            },
+                        }}
+                        shadow
+                        as={"a"}
+                        href="https://www.npmjs.com/package/prism-animation">Download on NPM</Button>
                 </Flex>
             </Container>
 

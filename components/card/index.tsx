@@ -42,6 +42,10 @@ const CardInnerContainer = styled('div', {
     padding: "$4",
     oveflow: "hidden",
 
+    "@bp1": {
+        padding: '$2'
+    },
+
     variants: {
         noPadding: {
             true: {
@@ -59,6 +63,10 @@ const CardTitle = styled('div', {
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
+
+    "@bp1": {
+        padding: '$1 $2'
+    },
 
     ['svg']: {
         width: '1.75rem',

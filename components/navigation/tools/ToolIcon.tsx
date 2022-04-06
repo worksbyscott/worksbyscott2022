@@ -16,6 +16,7 @@ import { useEffect } from 'react';
 import Link from 'next/link';
 import { DropdownMenu, DropdownMenuArrow, DropdownMenuContent, DropdownMenuItem } from '../../dropdown';
 import { DropdownMenuTrigger } from '@radix-ui/react-dropdown-menu';
+import { log } from 'console';
 
 
 const ToolContainer = styled(motion.div, {
@@ -87,23 +88,41 @@ interface ToolBarProps {
 const ToolBarButton = ({ url, tooltip, children }: ToolBarProps) => {
     const router = useRouter();
 
+    const isActive = () => router.pathname == url || (router.pathname.includes('work') && url == '/work')
+
+
     return (
         <Tooltip delayDuration={0}>
             <TooltipTrigger asChild>
-                <Link href={url}>
-                    <ToolContainer
-                        whileHover={{
-                            scale: 1.05
-                        }}
-                        active={router.pathname == url}>
-                        {children}
-                    </ToolContainer>
-                </Link>
+                {url == 'none' ? (
+                    <>
+                        <ToolContainer
+                            whileHover={{
+                                scale: 1.05
+                            }}
+                            active={isActive()}>
+                            {children}
+                        </ToolContainer>
+                    </>
+                ) : (
+                    <>
+                        <Link href={url}>
+                            <ToolContainer
+                                whileHover={{
+                                    scale: 1.05
+                                }}
+                                active={isActive()}>
+                                {children}
+                            </ToolContainer>
+                        </Link>
+                    </>
+                )}
+
             </TooltipTrigger>
             <TooltipContent sideOffset={5} >
                 {tooltip}
             </TooltipContent>
-        </Tooltip>
+        </Tooltip >
     )
 }
 
