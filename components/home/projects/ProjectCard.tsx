@@ -97,7 +97,7 @@ const ProjectCard = ({ img, name, url, description, index }: IProjectCard) => {
                                 <Text size='2'>{description}</Text>
                             </CardDetails>
 
-                            <Image src='/cipher.png' layout="fill" objectFit="cover" alt={description} />
+                            <Image src={img} layout="fill" objectFit="cover" alt={description} />
 
                         </AspectRatio.Root>
                     </CardContainer>

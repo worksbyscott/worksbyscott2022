@@ -22,10 +22,9 @@ const Work: NextPage = () => {
     return (
         <Container>
             <ProjectsContainer>
-                <ProjectCard name="Prism Animation" url="/work/prism" description="Javascipt animation library" img="" index={1} />
-                <ProjectCard name="Colin Prior" url="/work/colin-prior" description="E-Commerce Store" img="" index={2} />
-                <ProjectCard name="Dealer's Choice" url="/work/dealers" description="NFT presale site" img="" index={3} />
-                <ProjectCard name="Cella FM" url="/work/cella" description="Community Radio Statio" img="" index={4} />
+                <ProjectCard name="Prism Animation" url="/work/prism" description="Javascipt animation library" img="/prism1.png" index={1} />
+                <ProjectCard name="Colin Prior" url="/work/colin" description="E-Commerce Store" img="/cp9.png" index={2} />
+                <ProjectCard name="Dealer's Choice" url="/work/dealer" description="NFT presale site" img="/dealer2.png" index={3} />
 
             </ProjectsContainer>
         </Container>

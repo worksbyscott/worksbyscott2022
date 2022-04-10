@@ -46,35 +46,12 @@ const ContactFormDialog = (props: ContactForm) => {
                     Are you looking to hiring a Front-end Developer for your next project, expand your freelance roster or just want to talk Web Development contact me. Email <InlineCode>info@worksbyscott.uk</InlineCode> or fill in the form below.
                 </AlertDialogDescription>
 
-                <Text css={{ margin: 0, fontSize: '1rem' }} size={'1'}>Name</Text>
-                <Input placeholder="john doe" />
-
-                <Text css={{ margin: 0, fontSize: '1rem' }} size={'1'}>Email</Text>
-                <Input placeholder="example@gmail.com" />
-
-                <Text css={{ margin: 0, fontSize: '1rem' }} size={'1'}>Subject</Text>
-                <Input placeholder="subject" />
-
-                <Text css={{ margin: 0, fontSize: '1rem' }} size={'1'}>Message</Text>
-                <Input placeholder="message" />
-
                 <Flex css={{ marginTop: "1rem", justifyContent: 'flex-end' }}>
                     <AlertDialogCancel asChild>
-                        <Button type="defaultNoLine" css={{ marginRight: 25 }}>
+                        <Button type="featuredNoLine" css={{ marginRight: 25 }}>
                             Cancel
                         </Button>
                     </AlertDialogCancel>
-                    <AlertDialogAction asChild>
-                        <Tooltip delayDuration={0}>
-                            <TooltipTrigger asChild>
-                                <Button type="featured">Send Message</Button>
-                            </TooltipTrigger>
-                            <TooltipContent sideOffset={5} >
-                                You can't go back
-                            </TooltipContent>
-                        </Tooltip >
-
-                    </AlertDialogAction>
                 </Flex>
             </AlertDialogContent>
         </AlertDialog>

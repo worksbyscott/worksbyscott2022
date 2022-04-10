@@ -39,13 +39,22 @@ const IconContainer = styled(motion.div, {
     }
 })
 
+const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
+
 
 const Logo: React.FC = () => {
     return (
         <IconContainer
+            initial={{
+                opacity: 0,
+            }}
+            animate={{
+                opacity: 1,
+            }}
             whileHover={{
                 scale: 1.05
             }}
+            transition={transition}
         >
             <Icon />
         </IconContainer>

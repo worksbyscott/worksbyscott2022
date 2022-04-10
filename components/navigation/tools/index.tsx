@@ -32,15 +32,15 @@ const PreToolBar: React.FC = () => {
         <ToolBarContainer>
             <Grid>
                 <LayoutGroup>
-                    <ToolBarButton url='/' tooltip="Home">
+                    <ToolBarButton key='homeToolbar' url='/' tooltip="Home">
                         <HomeIcon />
                     </ToolBarButton>
 
-                    <ToolBarButton url='/work' tooltip="About" >
+                    <ToolBarButton key='workBar' url='/work' tooltip="About" >
                         <MailIcon />
                     </ToolBarButton>
 
-                    <ToolBarButton url='none' tooltip="Contact" >
+                    <ToolBarButton key='contactBar' url='none' tooltip="Contact" >
                         <ContactFormDialog>
                             <NFTIcon />
                         </ContactFormDialog>

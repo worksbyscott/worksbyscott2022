@@ -57,7 +57,7 @@ const CaptionImage = (props: ImageProps) => {
             }}>
             <AspectRatio.Root ratio={16 / 9}>
                 <ImageWrapper>
-                    <Image src='/cipher.png' layout="fill" objectFit="cover" alt={caption ? caption : ""} />
+                    <Image src={nameString ? nameString : "/cipher.png"} layout="fill" objectFit="cover" alt={caption ? caption : ""} />
                 </ImageWrapper>
 
             </AspectRatio.Root>

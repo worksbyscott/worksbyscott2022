@@ -52,7 +52,7 @@ const Prism: NextPage = () => {
             </Container>
 
             <Container>
-                <CaptionImage caption="Screen shot of shop collection page. colinprior.co.uk/collections" nameString="test" />
+                <CaptionImage nameString="/prism1.png" />
             </Container>
 
             <Container css={{ marginTop: "$8" }}>

@@ -8,7 +8,8 @@ import Link from 'next/link'
 const FooterContainer = styled('div', {
     margin: "4rem 0",
     borderTop: "1px solid $cardStandardBorder",
-    paddingTop: "3rem "
+    paddingTop: "3rem ",
+    width: "100vw"
 })
 
 const IconWrapper = styled('div', {

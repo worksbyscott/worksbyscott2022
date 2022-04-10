@@ -44,8 +44,8 @@ const HomeBlock = () => {
                 <TitleBlock />
             </Container>
             <ProjectsContainer>
-                <ProjectCard name="Colin Prior" url="/work/colin" description="E-commerice Store" img="" index={0} />
-                <ProjectCard name="Prism Animation" url="/work/prism" description="React animation library" img="" index={1} />
+                <ProjectCard name="Colin Prior" img="/cp9.png" url="/work/colin" description="E-commerce Store" index={0} />
+                <ProjectCard name="Dealer's Choice" img="/dealer2.png" url="/work/dealer" description="NFT Presale site" index={1} />
             </ProjectsContainer>
 
             <Container css={{ marginBottom: "$6 " }}>

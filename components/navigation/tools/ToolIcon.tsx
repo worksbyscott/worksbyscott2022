@@ -90,6 +90,8 @@ const ToolBarButton = ({ url, tooltip, children }: ToolBarProps) => {
 
     const isActive = () => router.pathname == url || (router.pathname.includes('work') && url == '/work')
 
+    const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
+
 
     return (
         <Tooltip delayDuration={0}>
@@ -97,9 +99,17 @@ const ToolBarButton = ({ url, tooltip, children }: ToolBarProps) => {
                 {url == 'none' ? (
                     <>
                         <ToolContainer
+                            key={url + "tool"}
+                            initial={{
+                                opacity: 0,
+                            }}
+                            animate={{
+                                opacity: 1,
+                            }}
                             whileHover={{
                                 scale: 1.05
                             }}
+                            transition={transition}
                             active={isActive()}>
                             {children}
                         </ToolContainer>
@@ -108,9 +118,17 @@ const ToolBarButton = ({ url, tooltip, children }: ToolBarProps) => {
                     <>
                         <Link passHref href={url}>
                             <ToolContainer
+                                key={url + "tool"}
+                                initial={{
+                                    opacity: 0,
+                                }}
+                                animate={{
+                                    opacity: 1,
+                                }}
                                 whileHover={{
                                     scale: 1.05
                                 }}
+                                transition={transition}
                                 active={isActive()}>
                                 {children}
                             </ToolContainer>

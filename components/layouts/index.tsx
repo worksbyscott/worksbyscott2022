@@ -1,6 +1,8 @@
 import { styled } from "@stitches/react";
-import { PropsWithChildren, ReactChild } from "react";
+import { AnimatePresence } from "framer-motion";
+import { useEffect, useState } from "react";
 import Footer from "../footer";
+import Introduction from "../introduction/introduction";
 import Navigation from "../navigation";
 
 interface LayoutProps {
@@ -23,13 +25,30 @@ const PageWrapper = styled('div', {
 })
 
 export default function Layout({ children }: LayoutProps) {
+
+    const [introduction, setIntroduction] = useState(true);
+
+    useEffect(() => {
+        setInterval(() => {
+            setIntroduction(false)
+        }, 3000)
+    }, [])
+
     return (
         <SiteWrapper>
-            <Navigation />
-            <PageWrapper>
-                {children}
-            </PageWrapper>
-            <Footer />
+            <AnimatePresence exitBeforeEnter>
+                {introduction ? (
+                    <Introduction key="intro" />
+                ) : (
+                    <>
+                        <Navigation />
+                        <PageWrapper>
+                            {children}
+                        </PageWrapper>
+                        <Footer />
+                    </>
+                )}
+            </AnimatePresence>
         </SiteWrapper>
     )
 }
